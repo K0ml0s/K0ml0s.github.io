@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows telepítés</title>
+    <link rel="shortcut icon" href="images/background/logo.png">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/navbar.css">
+    <script src="assets/scripts.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+      <a href="index.html"><div class="title">K0M1</div></a>
+      <a href="#" class="navbar-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="index.html">Kezdőlap</a></li>
+          <li><a href="wininstall.html">Windows telepítés</a></li>
+          <li><a href="ssd_optimization.html">SSD optimalizálás</a></li>
+          <li><a href="gpu_undervolt.html">GPU Undervolt</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+        <div class="content-box box">
+            <div class="content-box-body">
+                <h1>Windows telepítés és optimalizálás</h1>
+                <p><span class="bold">Mivel rengetek felesleges program fut a háttérben amire nincsen szükség és ezek csak lassítják a rendszert fontos hogy Debloatoljuk a Windowst!<br><br></span>A <span class="bold">RAM</span> használatot <span class="red bold">2.5GB</span>-ról <span class="green bold">1.6GB</span>-ra,<br> a <span class="bold">CPU</span> használatot <span class="red bold">3-8%</span>-ról <span class="green bold">0%</span>-ra is csökkenthetjük<br> nem beszélve a játékokban tapasztalható átlag és minimum <span class="bold">FPS</span> értékek növekedésről.</p><hr><br>
+                <a href="https://www.microsoft.com/hu-hu/software-download" target="_blank">Windows ISO telepítése</a>
+                <p>2db USB-re lesz szükséged, az egyikre a Windows ISO fájl fog kerülni, a másikra pedig a chipset, lan és audio driverek az alaplapgyártód oldaláról!</p>
+                <p>Hogy meg tudd csinálni a bootolható USB-t töltsd le a Rufus-t: <a href="https://rufus.ie/en/" target="_blank">Rufus</a></p>
+                <div class="image-block"><img src="images/wininstall/rufus1.png" loading="lazy" alt=""></div>
+                <p>Tegyél be egy Pendriveot, nyisd meg a Rufus-t majd válaszd ki az ISO fájlt és nyomj az Indításra</p>
+                <div class="image-block"><img src="images/wininstall/rufus2.png" loading="lazy" alt=""></div>
+                <p>Pipáld be a képen látottakat!</p>
+                <p>Miután megcsináltad bootolhatóra az USB-t kapcsold ki a gépet majd</p><h3 class="red">húzd ki a netet!</h3><p>Egy bekapcsolás után irány BIOS-ba ahol át kell állítanod a bootolandó meghajtót.</p>
+                <details>
+                  <summary>Windows10 telepítés</summary>
+                  <div class="image-block"><img src="images/wininstall/win10_kep6.png" loading="lazy" alt=""></div>
+                  <p>Következő ablaknál klikk a <span class="bold">Telepítés</span>re!</p>
+                  <div class="image-block"><img src="images/wininstall/win10_kep7.png" loading="lazy" alt=""></div>
+                  <p>Itt nyomj arra hogy <span class="bold">Nincs termékkulcsom</span> mivel ha már volt aktiválva Windows a gépeden akkor netre csatlakozás után automatikusan aktiválja magát a rendszer, ha nem volt aktiválva akkor majd a rendszeren belül add meg a termákkulcsot!</p>
+                  <div class="image-block"><img src="images/wininstall/win10_kep8.png" loading="lazy" alt=""></div>
+                  <p>Itt azt a verziót válaszd ki amelyiknek a termékkulcsát megvetted vagy majd megfogod venni!</p>
+                  <p>Következő ablaknál fogadd el a licencfeltételeket!</p>
+                  <div class="image-block"><img src="images/wininstall/win10_kep9.png" loading="lazy" alt=""></div><br>
+                  <div class="image-block"><img src="images/wininstall/win10_kep10.png" loading="lazy" alt=""></div>
+                  <p>Töröld a meglévő összes partíciót majd az <span class="bold">Új</span> gomb megnyomásával hozz létre egy újat!</p>
+                  <p>Telepítés után válaszd ki a nyelvet és a megfelelő billentyűzetkiosztást!</p>
+                  <div class="image-block"><img src="images/wininstall/win10_kep11.png" loading="lazy" alt=""></div><br>
+                  <div class="image-block"><img src="images/wininstall/win10_kep12.png" loading="lazy" alt=""></div>
+                  <p>Állíts be egy felhasználónevet és egy jelszót a nagyobb biztonság érdekében viszont ha te nem szeretnél akkor hagyd üresen a mezőt!</p>
+                  <div class="image-block"><img src="images/wininstall/win10_kep13.png" loading="lazy" alt=""></div><br>
+                  <div class="image-block"><img src="images/wininstall/win10_kep14.png" loading="lazy" alt=""></div>
+                  <p>Ezután az összes kérdésre válaszolj nemmel!</p><br>
+                </details><br>
+                <details>
+                  <summary>Windows11 telepítés</summary>
+                  <p>Eddig a lépésig a telepítés ugyan az mint Windows10-en</p>
+                  <p>Állítsd be a régiót és a billentyűzetkiosztást!</p>
+                  <div class="image-block"><img src="images/wininstall/win11_kep1.png" loading="lazy" alt=""></div><br>
+                  <div class="image-block"><img src="images/wininstall/win11_kep2.png" loading="lazy" alt=""></div>
+                  <p><span class="bold">Windows + R</span> majd írd be hogy <span class="bold">charmap</span> és keresd ki a <span class="bold">\</span>-t</p>
+                  <p><span class="bold">SHIFT + F10</span> majd írd be hogy <span class="bold">oobe\bypassnro</span> és <span class="bold">ENTER</span></p>
+                  <p>ezután újraindul a gép és megjelenik majd a <span class="bold">Nincs internetem</span> gomb</p>
+                  <div class="image-block"><img src="images/wininstall/win11_kep3.png" loading="lazy" alt=""></div><br>
+                  <div class="image-block"><img src="images/wininstall/win11_kep4.png" loading="lazy" alt=""></div>
+                  <p>Egy felhasználónév és jelszó megadása után az összes kérdésre válaszolj nemmel!<br>A nagyobb biztonság érdekében állíts be egy jelszót, de hogyha nem szeretnél jelszót hagyd üresen a mezőt!</p><br>
+                </details>
+                <p>Miután letöltötted a chipset, lan és audio drivereket csatlakozz újra internetre és töltsd le a videókártyád driverét majd a Windows Update fülnél addig keress majd szedd le a frissítéseket ameddig el nem fogynak!</p><hr>
+                <h3>Fontosabb szoftverek:</h3>
+                <a href="https://www.techpowerup.com/nvcleanstall/" target="_blank">NVCleanstall</a><br>
+                <a href="https://www.amd.com/en/support" target="_blank">AMD driverek</a><br>
+                <a href="https://7-zip.org/" target="_blank">7zip</a><br>
+                <a href="https://www.hdsentinel.com/" target="_blank">HardDiskSentinel</a><br>
+                <a href="https://www.msi.com/Landing/afterburner/graphics-cards" target="_blank">MSI Afterburner</a>
+                <p>Itt találod a gépre telepítet .NET Framework verziókat: <div class="copy-body">
+                  <div id="code2" class="copy-text">C:\Windows\Microsoft.NET\Framework</div>
+                  <div class="copy-button"><button onclick="Copy2()">Copy</button></div>
+                </div></p>
+                <h2>Debloat</h2>
+                <p>Futtasd rendszergazdaként PowerShell-ben: <a href="https://github.com/ChrisTitusTech" target="_blank">made by ChrisTitusTech</a></p>
+                <div class="copy-body">
+                  <div id="code1" class="copy-text">irm christitus.com/win | iex</div>
+                  <div class="copy-button"><button onclick="Copy1()">Copy</button></div>
+                </div>
+                <p>Az utolsó lépés hogy a gépházban minden beállítást átnézve kikapcsolod azokat amelyekre nincsen szükséged ezzel csökkentve tovább a háttérben futó alkalmazások számát.</p>
+                <h2 class="green">Gratulálok, mostmár egy kevésbé lassú rendszer gazdájának tudhatod magad!</h2>
+        </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer-inner">
+      <p class="bold">K0M1 | szioka :P</p>
+    </div>
+  </div>
+</body>
+</html>

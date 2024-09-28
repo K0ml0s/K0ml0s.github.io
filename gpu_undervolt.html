@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPU Undervolt</title>
+    <link rel="shortcut icon" href="images/background/logo.png">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/navbar.css">
+    <script src="assets/scripts.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+      <a href="index.html"><div class="title">K0M1</div></a>
+      <a href="#" class="navbar-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="index.html">Kezdőlap</a></li>
+          <li><a href="wininstall.html">Windows telepítés</a></li>
+          <li><a href="ssd_optimization.html">SSD optimalizálás</a></li>
+          <li><a href="gpu_undervolt.html">GPU Undervolt</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+        <div class="content-box box">
+            <div class="content-box-body">
+              <h1>GPU Undervolt</h1>
+              <p>Mivel minden videokártya chip gyárilag magasabb feszültségi szinten jön a dobozból fontos undervoltolni hogy hatékonyabban és hűvösebben tudjon működni méghozzá teljesítményromlás nélkül.</p><hr>
+                <p>Nvidia kártyához MSI Afterburner ┃ <a href="https://www.msi.com/Landing/afterburner/graphics-cards" target="_blank">MSI Afterburner</a></p>
+                <p>AMD kártyához AMD Driver vagy MSI Afterburner ┃ <a href="https://www.amd.com/en/support" target="_blank">AMD Driver</a></p>
+                <h3 class="red">MSI Afterburner telepítése során a RivaTunert is telepítsd!</h3>
+                <div class="image-block"><img src="images/gpu_undervolt/rivatunerinstall.png" loading="lazy" alt=""></div>
+                <p>Miután letöltött nyisd meg majd</p>
+                <h3 class="red">Húzd ki a Power Limitet maximumra!</h3>
+                <p>A kártya ventillátorának sebességét állítsd be egy fix értékre amíg tesztelsz!</p>
+                <div class="image-block"><img src="images/gpu_undervolt/msiafterburner.png" loading="lazy" alt=""></div>
+                <p> Kizárólag azután kapcsold be az <span class="bold">Apply overclocking at system startup</span>-ot miután az Undervolt stabil.</p><hr>
+                <p>Első lépésben nézd meg hogyan teljesít alap beállítások mellett a kártyád.</p>
+                <a href="https://www.3dmark.com/" target="_blank">3DMARK</a><br>
+                <a href="https://benchmark.unigine.com/heaven" target="_blank">Heaven Benchmark</a>
+                <p>Ezután írd fel a benchmark pontszámát, fogyasztást, legmagasabb hőmérsékletet,órajelet, feszültséget valamint ha akarod akkor az átlag és minimum FPS értékeket is felírhatod azért hogy a késöbbiekben tudj mihez viszonyítani.</p>
+                <div class="image-block"><img src="images/gpu_undervolt/elotte-utana.png" loading="lazy" alt=""></div>
+                <p>A Benchmark után nézd meg mekkora órajelen milyen feszültséget produkál a kártya. Ezekkel az értékekkel kezdve mindig vonj el a feszültségből 0.025V-ot (PL: 2970MHz / 1.000V -> 0.975V, 0.950V...) ezt folytasd mindaddig amíg nem chras-elsz, chras után adj hozzá 10mV-ot (0.01V) ameddig stabli nem lesz. Példa:</p>
+                <div class="image-block"><img src="images/gpu_undervolt/clock-voltage.png" loading="lazy" alt=""></div><br>
+                <div class="image-block"><img src="images/gpu_undervolt/gpu_voltage-frequency_curve.png" loading="lazy" alt=""></div>
+                <p>CTRL+F hogy menyisd a Curve Editort</p>
+                <p>Nyilak segítségével tudod beállítani a pontos órajelet</p>
+                <p>Ahoz hogy egy egyenest kapj állítsd be az órajelet a stabil frekvenciához majd a további pontokat jelöld ki SHIFT + Bal klikk a SHIFT-et nem elengedve ENTER majd MSI Afterburnerben nyomj a pipára.</p><hr>
+                <h3 class="red">RivaTunerben állítsd be a Framerate Limitet annyira ahány Hz-es a monitorod!<br>Viszont csak azután miután Undervoltoltad a kártyát, amíg tezszteled addig ne legyen Limit beállítva!</h3>
+                <p>Ha 160Hz-es a monitorod nincs értelme a 240FPS nek mivel úgyse látod és feleslegesen dolgozik szegény kártyád ezért fontos hogy állítsd be a Framerate Limitet 160-ra ebben az esetben. Ezzel jócskán meghosszabbítot kártyád élettartamát mivel nem kell 1000+FPS-t kitolnia magából töltőképernyőn vagy akkor amikor az eget bámulod, csak annyit amennyire neked szükséged van vagyis ahány Hz-es a monitorod.</p>
+                <div class="image-block"><img src="images/gpu_undervolt/rivatuner.png" loading="lazy" alt=""></div>
+                <h2>Fan Curve</h2>
+                <p>Állítsd be úgy hogy a kártya hőmérsékletét normáis keretek között tartsa!</p>
+                <div class="image-block"><img src="images/gpu_undervolt/gpufan.png" loading="lazy" alt=""></div>
+                <h2 class="green">Gratulálok, kihoztad a legtöbbet a kártyádból méghozzá a leghatékonyabb módon!</h2>
+        </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer-inner">
+      <p class="bold">K0M1 | szioka :P</p>
+    </div>
+  </div>
+</body>
+</html>

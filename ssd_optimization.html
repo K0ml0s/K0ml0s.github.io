@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSD optimalizálás</title>
+    <link rel="shortcut icon" href="images/background/logo.png">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/navbar.css">
+    <script src="assets/scripts.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+      <a href="index.html"><div class="title">K0M1</div></a>
+      <a href="#" class="navbar-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="index.html">Kezdőlap</a></li>
+          <li><a href="wininstall.html">Windows telepítés</a></li>
+          <li><a href="ssd_optimization.html">SSD optimalizálás</a></li>
+          <li><a href="gpu_undervolt.html">GPU Undervolt</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+        <div class="content-box box">
+            <div class="content-box-body">
+                <h1>SSD optimalizálás</h1>
+                <p>Az optimalizálás fontos hogy az SSD-nek a lehető legkevesebb felesleges adat írására kerüljön sor ezzel kímélve és növelve élettartamát.</p><hr>
+                <h2>1. AHCI kontroller</h2><p>Győződjünk meg róla hogy a SATA portunk AHCI Controller-el van-e vezérelve Eszköz kezelő:</p>
+                <div class="image-block"><img src="images/ssd_optimization/IDE-AHCI.png" loading="lazy" alt=""></div>
+                <p>Ha neked IDE van beállítva akkor ez a BIOS-ban egy perc alatt átállítható.</p>
+                <h2>2. Driver</h2>
+                <p>Ha neked M.2 NVMe SSD-d van akkor töltsd le a drivert a gyártó oldaláról.</p>
+                <a href="https://www.kingston.com/en/support/technical/ssdmanager" target="_blank">KINGSTON SSD Manager</a>
+                <h2>3. TRIM kikapcsolása</h2>
+                <p>Futtasd a parancssorban rendszergazdaként:</p>
+                <div class="copy-body">
+                  <div id="code1" class="copy-text">fsutil behavior query DisableDeleteNotify</div>
+                  <div class="copy-button"><button onclick="Copy1()">Copy</button></div>
+                </div><br><br>
+                <div class="image-block"></div><img src="images/ssd_optimization/cmd.png" loading="lazy" alt="">
+                <p>Ha itt nulla áll akkor a TRIM ki van kapcsolva szóval minden jó, ha 1-es akkor írd be ugyan ezt a parancsot csak a végére írj egy nullát.</p>
+                <h2>4. Hibernáció kikapcsolása</h2>
+                <p>Futtasd a parancssorban rendszergazdaként:</p>
+                <div class="copy-body">
+                  <div id="code2" class="copy-text">powercfg.exe -h off</div>
+                  <div class="copy-button"><button onclick="Copy2()">Copy</button></div>
+                </div>
+                <h2>5. Töredezettségmentesítés kikapcsolása</h2>
+                <div class="image-block"><img src="images/ssd_optimization/toredezettsegmentesites.png" loading="lazy" alt=""></div><br>
+                <div class="image-block"><img src="images/ssd_optimization/toredezettsegmentesites2.png" loading="lazy" alt=""></div><br>
+                <div class="image-block"><img src="images/ssd_optimization/toredezettsegmentesites3.png" loading="lazy" alt=""></div>
+                <h2>6. Indexelés kikapcsolása</h2>
+                <div class="image-block"><img src="images/ssd_optimization/indexeleskikapcsolasa.png" loading="lazy" alt=""></div>
+                <h2>7. Visszaállítási pont kikapcolása</h2>
+                <p>számítógép konfigurációja -> Felügyeleti sablonok -> Rendszer -> rendszer visszaállítás -> Rendszer visszaállítás kikapcsolása -> Engedélyezve, Alkalmaz, Oké</p>
+                <div class="image-block"><img src="images/ssd_optimization/visszaallitasipontkikapcsolasa.png" loading="lazy" alt=""></div>
+                <h2>8. Lapozófájl kikapcsolása</h2>
+                <h3 class="red">Csak abban az esetben ha van másodlagos meghajtód!</h3>
+                <div class="image-block"><img src="images/ssd_optimization/lapozofajl.png" loading="lazy" alt=""></div>
+                <h2>9. TEMP és TMP mappák áthelyezáse a másodlagos meghajtóra</h2>
+                <div class="image-block"><img src="images/ssd_optimization/temp es tmp.png" loading="lazy" alt=""></div>
+                <h2>10. SUPERFETCH (sysmain) kikapcsolása</h2>
+                <div class="image-block"><img src="images/ssd_optimization/servicesmsc.png" loading="lazy" alt=""></div>
+                <p>keresd ki majd az indítás típusát állítsd át "Letíltva"-ra és állítsd is le.</p>
+                <h2 class="green">Gratulálok, mindent megtettél annak érdekében hogy a lehető leghosszabb ideig üzemeljen az SSD-d!</h2>
+        </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer-inner">
+      <p class="bold">K0M1 | szioka :P</p>
+    </div>
+  </div>
+</body>
+</html>
