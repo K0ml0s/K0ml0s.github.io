@@ -74,6 +74,24 @@ h1 {
 p {
     font-size: 16px;
 }
+.links {
+    width: 12%;
+    height: auto;
+    display: inline-grid;
+    padding: 0px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 0.4rem;
+    border: 3px solid rgb(255, 255, 255);
+    background-color: #000000;
+    font-weight: 900;
+    padding: 5px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+.links:hover {
+    transform: scale(1.1);
+}
 /*---------------------------------------------------*/
 button {
     margin: 5px;
@@ -176,6 +194,13 @@ details[open] > summary {
         width: 94%;
         padding: 0px;
         margin-left: 2.6%;
+        margin-bottom: 20px;
+    }
+    .links {
+        width: 94%;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin-left: 0;
         margin-bottom: 20px;
     }
 }
