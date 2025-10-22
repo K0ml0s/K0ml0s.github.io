@@ -1,1 +1,1 @@
-[weboldalam](https://k0ml0s.github.io/)
+[weboldalam](https://k0ml0s.github.io/index.html)
